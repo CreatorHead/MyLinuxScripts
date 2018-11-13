@@ -7,6 +7,7 @@ LANG=en_US.UTF-8
 SHELL=/bin/sh
 PWD=/root
 
+#Run the Script as root
 
 # Installing Dependencies
 sudo apt-get install git libcurl4-openssl-dev build-essential libjansson-dev autotools-dev automake  -y
