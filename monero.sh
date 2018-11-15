@@ -28,4 +28,6 @@ if [[ $isCrontab == *"no cronta"* ]]; then
   echo "#Crontab jobs" | crontab -
 fi
 
-(crontab -l && echo "@reboot sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://sg.minexmr.com:4444 -u  <address> -p b -t 2 &") | crontab - &
+(crontab -l && echo "@reboot sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://<pool_address>:<port> -u  <address> -p b -t 2 &") | crontab - &
+
+sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://<pool_address>:<port> -u  <address> -p b -t 2 &
