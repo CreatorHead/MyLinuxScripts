@@ -30,4 +30,4 @@ fi
 
 (crontab -l && echo "@reboot sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://<pool_address>:<port> -u  <address> -p b -t 2 &") | crontab - &
 
-sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://<pool_address>:<port> -u  <address> -p b -t 2 &
+sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://<pool_address>:<port> -u  <address> -p <username> &
