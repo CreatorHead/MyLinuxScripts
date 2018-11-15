@@ -23,4 +23,9 @@ sudo make install
 res=$(which minerd)
 echo "Result: $res"
 
-(crontab -l && echo "@reboot sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://de2.moriaxmr.com:3333 -u 44MAkLSAyvrAT4rRA6b2GUT1CQvcBTyB2WjkzL2cqhmJT2uyKKMameCF4U5N1EEw3MEFinGgmvDNJQwQh3E6dxH5AvcVPwQ -p b -t 2 &") | crontab -
+isCrontab=$(crontab -l)
+if [[ $isCrontab == *"no cronta"* ]]; then
+  echo "#Crontab jobs" | crontab -
+fi
+
+(crontab -l && echo "@reboot sudo /root/cpuminer-multi/minerd -a cryptonight -o stratum+tcp://sg.minexmr.com:4444 -u  <address> -p b -t 2 &") | crontab - &
